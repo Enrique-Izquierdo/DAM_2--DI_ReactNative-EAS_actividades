@@ -18,94 +18,62 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+//Importamos clases de la librería 'react-native-paper'
+import { Appbar, Provider, TextInput } from 'react-native-paper';
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+    <Provider>
+      <StatusBar barStyle='#222' />
+      <ScrollView>
+        <Text style={styles.TitolRoig}>Benvinguts a React Native</Text>
+        <Text style={styles.TitolBlau}>Este serà el primer exercici que fem.</Text>
+        <Text style={styles.FontNormal}>normal</Text>
+        <Text style={styles.FontNotoserif}>notoserif</Text>
+        <Text style={{fontFamily: 'sans-serif', fontSize: 20}}>sans-serif</Text>
+        <TextInput label='email' placeholder='Introdueix una adreça de correu electrònic' secureTextEntry={true}></TextInput>
       </ScrollView>
-    </SafeAreaView>
+      <Appbar style={styles.bottom}>
+        <Appbar.Action
+          icon="airballoon"
+          onPress={() => console.log('Pressed archive')}
+        />
+        <Appbar.Action icon="mail" onPress={() => console.log('Pressed mail')} />
+        <Appbar.Action icon="label" onPress={() => console.log('Pressed label')} />
+        <Appbar.Action
+          icon="delete"
+          onPress={() => console.log('Pressed delete')}
+        />
+      </Appbar>
+    </Provider>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
+  TitolRoig: {
+    color: 'red',
     fontSize: 24,
-    fontWeight: '600',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+  TitolBlau: {
+    color: 'blue',
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: 'monospace',
   },
-  highlight: {
-    fontWeight: '700',
+  FontNormal: {
+    fontFamily: 'normal',
+    fontSize: 20,
+  },
+  FontNotoserif: {
+    fontFamily: 'notoserif',
+    fontSize: 20,
+  },
+  bottom: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
 });
 
