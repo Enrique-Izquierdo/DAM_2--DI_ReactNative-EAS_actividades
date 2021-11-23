@@ -28,7 +28,29 @@ const localImg = require('./imatges/visualstudio_code-card.png');
 export default class App extends Component {
   render() {
     return (
-    <View style={styles.container}></View>
+    <View style={styles.container}>
+      <View style={styles.contenidor1}>
+        <View style={styles.contenidor1_1}></View>
+        <View style={styles.contenidor1_2}>          
+          <View style={styles.contenidor1_2_1}>
+            <View style={styles.contenidor1_2_1_1}>
+              <View style={styles.contenidor1_2_1_1_1}></View>
+              <View style={styles.contenidor1_2_1_1_2}></View>
+            </View>
+            <View style={styles.contenidor1_2_1_2}>
+              <View style={styles.contenidor1_2_1_2_1}></View>
+              <View style={styles.contenidor1_2_1_2_2}></View>
+            </View>
+            <View style={styles.contenidor1_2_1_3}>
+              <View style={styles.contenidor1_2_1_3_1}></View>
+              <View style={styles.contenidor1_2_1_3_2}></View>
+            </View>
+          </View>
+          <View style={styles.contenidor1_2_2}></View>
+        </View>
+      </View>
+      <View style={styles.contenidor2}></View>
+    </View>
     );
   }
 }
@@ -36,6 +58,104 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    flexDirection: 'column',
+    //backgroundColor: 'red',
+    borderColor: 'red',
+    borderWidth:3,
+    margin: 4,
   },
+  contenidor1: {
+    flex: 1,
+    flexDirection: 'row',
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor2: {
+    flex: 3,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_1: {
+    flex: 1,
+    borderColor: 'black',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2: {
+    flex: 3,
+    flexDirection:'column',
+    borderColor: 'black',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1: {
+    flex: 1,
+    flexDirection:'row',
+    borderColor: 'green',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_2: {
+    flex: 1,
+    borderColor: 'green',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_1: {
+    flex: 1,
+    borderColor: 'red',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_2: {
+    flex: 1,
+    borderColor: 'red',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_3: {
+    flex: 1,
+    borderColor: 'red',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_1_1: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_1_2: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_2_1: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_2_2: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_3_1: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor1_2_1_3_2: {
+    flex: 1,
+    borderColor: 'blue',
+    borderWidth:3,
+    margin: 4,
+  },
+
   });
