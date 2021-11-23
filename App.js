@@ -30,7 +30,9 @@ export default class App extends Component {
     return (
     <View style={styles.container}>
       <View style={styles.contenidor1}>
-        <View style={styles.contenidor1_1}></View>
+        <View style={styles.contenidor1_1}>
+        <Image style={{borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
+        </View>
         <View style={styles.contenidor1_2}>          
           <View style={styles.contenidor1_2_1}>
             <View style={styles.contenidor1_2_1_1}>
@@ -84,7 +86,8 @@ const styles = StyleSheet.create({
     margin: 4,
   },
   contenidor1_1: {
-    flex: 1,
+    flex: 1,    
+    justifyContent: 'center',
     borderColor: 'black',
     borderWidth:3,
     margin: 4,
