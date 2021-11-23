@@ -49,7 +49,11 @@ export default class App extends Component {
           <View style={styles.contenidor1_2_2}></View>
         </View>
       </View>
-      <View style={styles.contenidor2}></View>
+      <View style={styles.contenidor2}>
+        {images.map((item,pos) => {
+          return(<Image style={{borderWidth:2, borderColor:'red'}} key={pos} width={screenWidth/4.33} height={screenWidth/4.33} source={{uri: item}} />);
+        })}
+      </View>
     </View>
     );
   }
@@ -73,6 +77,8 @@ const styles = StyleSheet.create({
   },
   contenidor2: {
     flex: 3,
+    flexDirection: 'row',
+    flexWrap:'wrap',
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
