@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {
+  Button,
   StyleSheet,
   View,
   Text,
@@ -29,29 +30,43 @@ export default class App extends Component {
   render() {
     return (
     <View style={styles.container}>
-      <View style={styles.contenidor1}>
-        <View style={styles.contenidor1_1}>
-        <Image style={{borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
-        </View>
-        <View style={styles.contenidor1_2}>          
-          <View style={styles.contenidor1_2_1}>
-            <View style={styles.contenidor1_2_1_1}>
-              <View style={styles.contenidor1_2_1_1_1}></View>
-              <View style={styles.contenidor1_2_1_1_2}></View>
+      <View style={styles.seccion1}>
+        <View style={styles.contenedor_PerfilImagen}>
+          <Image style={{alignSelf:'center' ,borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
+        </View>        
+        <View style={styles.contenedor_PerfilCuerpo}>          
+          <View style={styles.contenidor_1A_1B_1A}>
+            <View style={styles.contenidor_1A_1B_1A_1A}>
+              <View style={styles.contenidor_1A_1B_1A_1A_1A}>
+                <Text>Posts</Text>
+              </View>
+              <View style={styles.contenidor_1A_1B_1A_1A_2A}>
+              <Text>20</Text>
+              </View>
             </View>
-            <View style={styles.contenidor1_2_1_2}>
-              <View style={styles.contenidor1_2_1_2_1}></View>
-              <View style={styles.contenidor1_2_1_2_2}></View>
+            <View style={styles.contenidor_1A_1B_1A_1B}>
+              <View style={styles.contenidor_1A_1B_1A_1B_1A}>
+                <Text>Followers</Text>
+              </View>
+              <View style={styles.contenidor_1A_1B_1A_1B_2A}>
+                <Text>110304</Text>
+              </View>
             </View>
-            <View style={styles.contenidor1_2_1_3}>
-              <View style={styles.contenidor1_2_1_3_1}></View>
-              <View style={styles.contenidor1_2_1_3_2}></View>
+            <View style={styles.contenidor_1A_1B_1A_1C}>
+              <View style={styles.contenidor_1A_1B_1A_1C_1A}>
+                <Text>Followings</Text>
+              </View>
+              <View style={styles.contenidor_1A_1B_1A_1C_2A}>
+                <Text>1103</Text>
+              </View>
             </View>
           </View>
-          <View style={styles.contenidor1_2_2}></View>
+          <View style={styles.contenedor_PerfilBoton}>
+            <Button title="Edit Profile" color="grey" />
+          </View>
         </View>
       </View>
-      <View style={styles.contenidor2}>
+      <View style={styles.seccion2}>
         {images.map((item,pos) => {
           return(<Image style={{borderWidth:2, borderColor:'red'}} key={pos} width={screenWidth/4.33} height={screenWidth/4.33} source={{uri: item}} />);
         })}
@@ -65,102 +80,106 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    //backgroundColor: 'red',
-    borderColor: 'red',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'red',
+    // borderWidth:3,
+    // margin: 4,
   },
-  contenidor1: {
+  seccion1: {
     flex: 1,
     flexDirection: 'row',
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
+    alignItems:'center',
+    // justifyContent:'center',
+    // borderColor: 'blue',
+    // borderWidth:3,
+    // margin: 4,
   },
-  contenidor2: {
+  seccion2: {
     flex: 3,
     flexDirection: 'row',
     flexWrap:'wrap',
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'blue',
+    // borderWidth:3,
+    // margin: 4,
   },
-  contenidor1_1: {
+  contenedor_PerfilImagen: {
     flex: 1,    
-    justifyContent: 'center',
+    // alignSelf:'center',
+    // justifyContent:'center',
+    // alignSelf:'center',    
     borderColor: 'black',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2: {
+  contenedor_PerfilCuerpo: {
     flex: 3,
     flexDirection:'column',
     borderColor: 'black',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1: {
+  contenidor_1A_1B_1A: {
     flex: 1,
     flexDirection:'row',
     borderColor: 'green',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_2: {
+  contenedor_PerfilBoton: {
     flex: 1,
-    borderColor: 'green',
-    borderWidth:3,
+    justifyContent: 'center',
+    // borderColor: 'green',
+    // borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_1: {
-    flex: 1,
-    borderColor: 'red',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor1_2_1_2: {
+  contenidor_1A_1B_1A_1A: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_3: {
+  contenidor_1A_1B_1A_1B: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_1_1: {
+  contenidor_1A_1B_1A_1C: {
+    flex: 1,
+    borderColor: 'red',
+    borderWidth:3,
+    margin: 4,
+  },
+  contenidor_1A_1B_1A_1A_1A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_1_2: {
+  contenidor_1A_1B_1A_1A_2A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_2_1: {
+  contenidor_1A_1B_1A_1B_1A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_2_2: {
+  contenidor_1A_1B_1A_1B_2A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_3_1: {
+  contenidor_1A_1B_1A_1C_1A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor1_2_1_3_2: {
+  contenidor_1A_1B_1A_1C_2A: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
