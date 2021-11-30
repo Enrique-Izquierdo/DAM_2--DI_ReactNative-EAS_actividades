@@ -30,43 +30,43 @@ export default class App extends Component {
   render() {
     return (
     <View style={styles.container}>
-      <View style={styles.seccion1}>
-        <View style={styles.contenedor_PerfilImagen}>
+      <View style={styles.contenedor_Encabezado}>
+       <View style={styles.contenedor_ImagenPerfil}>
           <Image style={{alignSelf:'center' ,borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
-        </View>        
-        <View style={styles.contenedor_PerfilCuerpo}>          
-          <View style={styles.contenidor_1A_1B_1A}>
-            <View style={styles.contenidor_1A_1B_1A_1A}>
-              <View style={styles.contenidor_1A_1B_1A_1A_1A}>
-                <Text>Posts</Text>
-              </View>
-              <View style={styles.contenidor_1A_1B_1A_1A_2A}>
-              <Text>20</Text>
-              </View>
+        </View>   
+        <View style={styles.contenedor_PanelControlPerfil}>          
+          <View style={styles.contenidor_InformacionPerfil}>
+            <View style={styles.contenidor_PostsPerfil}>
+              {/* <View style={styles.contenidor_NombreEtiqueta}> */}
+                <Text style={styles.contenidor_NombreEtiqueta}>Posts</Text>
+              {/* </View> */}
+              {/* <View style={styles.contenidor_ValorEtiqueta}> */}
+                <Text style={styles.contenidor_ValorEtiqueta}>20</Text>
+              {/* </View> */}
             </View>
-            <View style={styles.contenidor_1A_1B_1A_1B}>
-              <View style={styles.contenidor_1A_1B_1A_1B_1A}>
-                <Text>Followers</Text>
-              </View>
-              <View style={styles.contenidor_1A_1B_1A_1B_2A}>
-                <Text>110304</Text>
-              </View>
+            <View style={styles.contenidor_FollowersPerfil}>
+              {/* <View style={styles.contenidor_NombreEtiqueta}> */}
+                <Text style={styles.contenidor_NombreEtiqueta}>Followers</Text>
+              {/* </View> */}
+              {/* <View style={styles.contenidor_ValorEtiqueta}> */}
+                <Text style={styles.contenidor_ValorEtiqueta}>110304</Text>
+              {/* </View> */}
             </View>
-            <View style={styles.contenidor_1A_1B_1A_1C}>
-              <View style={styles.contenidor_1A_1B_1A_1C_1A}>
-                <Text>Followings</Text>
-              </View>
-              <View style={styles.contenidor_1A_1B_1A_1C_2A}>
-                <Text>1103</Text>
-              </View>
+            <View style={styles.contenidor_FollowingsPerfil}>
+              {/*<View style={styles.contenidor_NombreEtiqueta}>*/}
+                <Text style={styles.contenidor_NombreEtiqueta}> Followings</Text>
+              {/*</View>*/}
+              {/*<View style={styles.contenidor_ValorEtiqueta}>*/}
+                <Text style={styles.contenidor_ValorEtiqueta}>1103</Text>
+              {/*</View>*/}
             </View>
           </View>
-          <View style={styles.contenedor_PerfilBoton}>
+          <View style={styles.contenedor_BotonPerfil}>
             <Button title="Edit Profile" color="grey" />
           </View>
         </View>
       </View>
-      <View style={styles.seccion2}>
+      <View style={styles.contenedor_Fotos}>
         {images.map((item,pos) => {
           return(<Image style={{borderWidth:2, borderColor:'red'}} key={pos} width={screenWidth/4.33} height={screenWidth/4.33} source={{uri: item}} />);
         })}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     // borderWidth:3,
     // margin: 4,
   },
-  seccion1: {
+  contenedor_Encabezado: {
     flex: 1,
     flexDirection: 'row',
     alignItems:'center',
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     // borderWidth:3,
     // margin: 4,
   },
-  seccion2: {
+  contenedor_Fotos: {
     flex: 3,
     flexDirection: 'row',
     flexWrap:'wrap',
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     // borderWidth:3,
     // margin: 4,
   },
-  contenedor_PerfilImagen: {
+  contenedor_ImagenPerfil: {
     flex: 1,    
     // alignSelf:'center',
     // justifyContent:'center',
@@ -110,80 +110,56 @@ const styles = StyleSheet.create({
     borderWidth:3,
     margin: 4,
   },
-  contenedor_PerfilCuerpo: {
+  contenedor_PanelControlPerfil: {
     flex: 3,
     flexDirection:'column',
     borderColor: 'black',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A: {
+  contenidor_InformacionPerfil: {
     flex: 1,
     flexDirection:'row',
     borderColor: 'green',
     borderWidth:3,
     margin: 4,
   },
-  contenedor_PerfilBoton: {
+  contenedor_BotonPerfil: {
     flex: 1,
     justifyContent: 'center',
-    // borderColor: 'green',
-    // borderWidth:3,
+    borderColor: 'green',
+    borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A_1A: {
+  contenidor_PostsPerfil: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A_1B: {
+  contenidor_FollowersPerfil: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A_1C: {
+  contenidor_FollowingsPerfil: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A_1A_1A: {
+  contenidor_NombreEtiqueta: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_1A_1B_1A_1A_2A: {
+  contenidor_ValorEtiqueta: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
-  },
-  contenidor_1A_1B_1A_1B_1A: {
-    flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor_1A_1B_1A_1B_2A: {
-    flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor_1A_1B_1A_1C_1A: {
-    flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor_1A_1B_1A_1C_2A: {
-    flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
-  },
+  },  
 
   });
