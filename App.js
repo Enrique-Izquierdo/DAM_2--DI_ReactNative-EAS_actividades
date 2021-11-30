@@ -31,25 +31,25 @@ export default class App extends Component {
     return (
     <View style={styles.container}>
       <View style={styles.contenedor_Encabezado}>
-       <View style={styles.contenedor_ImagenPerfil}>
+       <View style={styles.contenedor_Encabezado_Imagen}>
           <Image style={{alignSelf:'center' ,borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
         </View>   
-        <View style={styles.contenedor_PanelControlPerfil}>          
-          <View style={styles.contenidor_InformacionPerfil}>
-            <View style={styles.contenidor_PostsPerfil}>              
-              <Text style={styles.contenidor_NombreEtiqueta}>Posts</Text>              
-              <Text style={styles.contenidor_ValorEtiqueta}>20</Text>              
+        <View style={styles.contenidor_Encabezado_PanelInformacionEdicion}>          
+          <View style={styles.contenidor_Encabezado_PanelInformacion}>
+            <View style={styles.contenidor_Encab_PanelInfo_ItemNombreValor}>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemNombre}>Posts</Text>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemValor}>20</Text>              
             </View>
-            <View style={styles.contenidor_FollowersPerfil}>              
-              <Text style={styles.contenidor_NombreEtiqueta}>Followers</Text>              
-              <Text style={styles.contenidor_ValorEtiqueta}>110304</Text>              
+            <View style={styles.contenidor_Encab_PanelInfo_ItemNombreValor}>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemNombre}>Followers</Text>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemValor}>110304</Text>              
             </View>
-            <View style={styles.contenidor_FollowingsPerfil}>              
-              <Text style={styles.contenidor_NombreEtiqueta}> Followings</Text>              
-              <Text style={styles.contenidor_ValorEtiqueta}>1103</Text>              
+            <View style={styles.contenidor_Encab_PanelInfo_ItemNombreValor}>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemNombre}> Followings</Text>              
+              <Text style={styles.contenidor_Encab_PanelInfo_ItemValor}>1103</Text>              
             </View>
           </View>
-          <View style={styles.contenedor_BotonPerfil}>
+          <View style={styles.contenedor_Encabezado_PanelEdicion}>
             <Button title="Edit Profile" color="grey" />
           </View>
         </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     // borderWidth:3,
     // margin: 4,
   },
-  contenedor_ImagenPerfil: {
+  contenedor_Encabezado_Imagen: {
     flex: 1,    
     // alignSelf:'center',
     // justifyContent:'center',
@@ -98,52 +98,40 @@ const styles = StyleSheet.create({
     borderWidth:3,
     margin: 4,
   },
-  contenedor_PanelControlPerfil: {
+  contenidor_Encabezado_PanelInformacionEdicion: {
     flex: 3,
     flexDirection:'column',
     borderColor: 'black',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_InformacionPerfil: {
+  contenidor_Encabezado_PanelInformacion: {
     flex: 1,
     flexDirection:'row',
     borderColor: 'green',
     borderWidth:3,
     margin: 4,
   },
-  contenedor_BotonPerfil: {
+  contenedor_Encabezado_PanelEdicion: {
     flex: 1,
     justifyContent: 'center',
     borderColor: 'green',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_PostsPerfil: {
+  contenidor_Encab_PanelInfo_ItemNombreValor: {
     flex: 1,
     borderColor: 'red',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_FollowersPerfil: {
-    flex: 1,
-    borderColor: 'red',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor_FollowingsPerfil: {
-    flex: 1,
-    borderColor: 'red',
-    borderWidth:3,
-    margin: 4,
-  },
-  contenidor_NombreEtiqueta: {
+  contenidor_Encab_PanelInfo_ItemNombre: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
     margin: 4,
   },
-  contenidor_ValorEtiqueta: {
+  contenidor_Encab_PanelInfo_ItemValor: {
     flex: 1,
     borderColor: 'blue',
     borderWidth:3,
