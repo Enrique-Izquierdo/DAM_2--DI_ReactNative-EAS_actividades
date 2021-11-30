@@ -32,7 +32,7 @@ export default class App extends Component {
     <View style={styles.container}>
       <View style={styles.contenedor_Encabezado}>
        <View style={styles.contenedor_Encabezado_Imagen}>
-          <Image style={{alignSelf:'center' ,borderWidth:2, borderColor:'red'}} width={screenWidth/5} height={screenWidth/5} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
+          <Image style={{alignSelf:'center' ,borderWidth:0, borderColor:'red', borderRadius: 60}} width={screenWidth/3.8} height={screenWidth/3.8} source={{uri: 'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces'}} />
         </View>   
         <View style={styles.contenidor_Encabezado_PanelInformacionEdicion}>          
           <View style={styles.contenidor_Encabezado_PanelInformacion}>
@@ -56,7 +56,7 @@ export default class App extends Component {
       </View>
       <View style={styles.contenedor_Fotos}>
         {images.map((item,pos) => {
-          return(<Image style={{borderWidth:2, borderColor:'red'}} key={pos} width={screenWidth/4.33} height={screenWidth/4.33} source={{uri: item}} />);
+          return(<Image style={{borderWidth:1, borderColor:'white'}} key={pos} width={screenWidth/4.33} height={screenWidth/4.33} source={{uri: item}} />);
         })}
       </View>
     </View>
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     // borderColor: 'red',
-    // borderWidth:3,
-    // margin: 4,
+    // borderWidth: 3,
+    margin: 4,
   },
   contenedor_Encabezado: {
     flex: 1,
@@ -78,64 +78,66 @@ const styles = StyleSheet.create({
     alignItems:'center',
     // justifyContent:'center',
     // borderColor: 'blue',
-    // borderWidth:3,
-    // margin: 4,
+    // borderWidth: 3,
+    margin: 4,
   },
   contenedor_Fotos: {
     flex: 3,
     flexDirection: 'row',
     flexWrap:'wrap',
     // borderColor: 'blue',
-    // borderWidth:3,
-    // margin: 4,
+    // borderWidth: 3,
+    margin: 4,
   },
   contenedor_Encabezado_Imagen: {
     flex: 1,    
     // alignSelf:'center',
     // justifyContent:'center',
-    // alignSelf:'center',    
+    // alignSelf:'center',
+    maxHeight:screenWidth/3.5,    
     borderColor: 'black',
-    borderWidth:3,
+    borderWidth: 0,
     margin: 4,
   },
   contenidor_Encabezado_PanelInformacionEdicion: {
-    flex: 3,
-    flexDirection:'column',
+    flex: 2,
+    flexDirection:'column',    
+    maxHeight:screenWidth/3.5,
     borderColor: 'black',
-    borderWidth:3,
+    borderWidth: 0,
     margin: 4,
   },
   contenidor_Encabezado_PanelInformacion: {
     flex: 1,
     flexDirection:'row',
-    borderColor: 'green',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'green',
+    // borderWidth: 3,
+    //margin: 4,
   },
   contenedor_Encabezado_PanelEdicion: {
     flex: 1,
     justifyContent: 'center',
-    borderColor: 'green',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'green',
+    // borderWidth: 3,
+    // margin: 4,
   },
   contenidor_Encab_PanelInfo_ItemNombreValor: {
     flex: 1,
-    borderColor: 'red',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'red',
+    // borderWidth: 3,
+    // margin: 4,
   },
   contenidor_Encab_PanelInfo_ItemNombre: {
     flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'blue',
+    // borderWidth: 3,
+    // margin: 4,
   },
   contenidor_Encab_PanelInfo_ItemValor: {
     flex: 1,
-    borderColor: 'blue',
-    borderWidth:3,
-    margin: 4,
+    // borderColor: 'blue',
+    // borderWidth: 3,
+    // margin: 4,
   },  
 
   });
