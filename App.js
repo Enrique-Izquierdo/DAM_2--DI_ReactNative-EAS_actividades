@@ -36,29 +36,17 @@ export default class App extends Component {
         </View>   
         <View style={styles.contenedor_PanelControlPerfil}>          
           <View style={styles.contenidor_InformacionPerfil}>
-            <View style={styles.contenidor_PostsPerfil}>
-              {/* <View style={styles.contenidor_NombreEtiqueta}> */}
-                <Text style={styles.contenidor_NombreEtiqueta}>Posts</Text>
-              {/* </View> */}
-              {/* <View style={styles.contenidor_ValorEtiqueta}> */}
-                <Text style={styles.contenidor_ValorEtiqueta}>20</Text>
-              {/* </View> */}
+            <View style={styles.contenidor_PostsPerfil}>              
+              <Text style={styles.contenidor_NombreEtiqueta}>Posts</Text>              
+              <Text style={styles.contenidor_ValorEtiqueta}>20</Text>              
             </View>
-            <View style={styles.contenidor_FollowersPerfil}>
-              {/* <View style={styles.contenidor_NombreEtiqueta}> */}
-                <Text style={styles.contenidor_NombreEtiqueta}>Followers</Text>
-              {/* </View> */}
-              {/* <View style={styles.contenidor_ValorEtiqueta}> */}
-                <Text style={styles.contenidor_ValorEtiqueta}>110304</Text>
-              {/* </View> */}
+            <View style={styles.contenidor_FollowersPerfil}>              
+              <Text style={styles.contenidor_NombreEtiqueta}>Followers</Text>              
+              <Text style={styles.contenidor_ValorEtiqueta}>110304</Text>              
             </View>
-            <View style={styles.contenidor_FollowingsPerfil}>
-              {/*<View style={styles.contenidor_NombreEtiqueta}>*/}
-                <Text style={styles.contenidor_NombreEtiqueta}> Followings</Text>
-              {/*</View>*/}
-              {/*<View style={styles.contenidor_ValorEtiqueta}>*/}
-                <Text style={styles.contenidor_ValorEtiqueta}>1103</Text>
-              {/*</View>*/}
+            <View style={styles.contenidor_FollowingsPerfil}>              
+              <Text style={styles.contenidor_NombreEtiqueta}> Followings</Text>              
+              <Text style={styles.contenidor_ValorEtiqueta}>1103</Text>              
             </View>
           </View>
           <View style={styles.contenedor_BotonPerfil}>
