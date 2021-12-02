@@ -20,16 +20,6 @@ const images = [
   'https://images.unsplash.com/photo-1505058707965-09a4469a87e4?w=125&h=125&fit=crop',
   'https://images.unsplash.com/photo-1423012373122-fff0a5d28cc9?w=125&h=125&fit=crop',
 ];
-const styles = StyleSheet.create({  
-    contenedor_Fotos: {
-      flex: 3,
-      flexDirection: 'row',
-      flexWrap:'wrap',
-      // borderColor: 'blue',
-      // borderWidth: 3,
-      margin: 4,
-    },  
-});
 
 
 export class LlocFotos extends Component {
@@ -44,4 +34,13 @@ export class LlocFotos extends Component {
     }
 }
 
-
+const styles = StyleSheet.create({  
+    contenedor_Fotos: {
+      flex: 3,
+      flexDirection: 'row',
+      flexWrap:'wrap',
+      // borderColor: 'blue',
+      // borderWidth: 3,
+      margin: 4,
+    },  
+});
