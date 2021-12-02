@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 });
 
 
-export class Imatges extends Component {
+export class LlocFotos extends Component {
     render() {
         return (
             <View style={styles.contenedor_Fotos}>

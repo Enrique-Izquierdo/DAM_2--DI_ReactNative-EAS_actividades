@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 import { Capsalera } from './src/components/Capsalera/Capsalera';
-import { Imatges } from './src/components/Imatges/Imatges';
+import { Imatges, LlocFotos } from './src/components/LlocFotos/LlocFotos';
 
 
 const localImg = require('./imatges/visualstudio_code-card.png');
@@ -13,7 +13,7 @@ export default class App extends Component {
     return (
     <View style={styles.container}>
       <Capsalera/>
-      <Imatges/>
+      <LlocFotos/>
     </View>
     );
   }
