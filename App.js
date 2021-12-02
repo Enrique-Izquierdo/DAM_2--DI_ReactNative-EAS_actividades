@@ -3,8 +3,8 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import { Capselera } from './src/components/Capselera';
-import { Imatges } from './src/components/Imatges';
+import { Capsalera } from './src/components/Capsalera/Capsalera';
+import { Imatges } from './src/components/Imatges/Imatges';
 
 
 const localImg = require('./imatges/visualstudio_code-card.png');
@@ -12,7 +12,7 @@ export default class App extends Component {
   render() {
     return (
     <View style={styles.container}>
-      <Capselera/>
+      <Capsalera/>
       <Imatges/>
     </View>
     );

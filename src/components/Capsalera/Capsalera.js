@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 });
 
 
-export class Capselera extends React.Component {
+export class Capsalera extends React.Component {
     render() {
         return (
             <View style={styles.contenedor_Encabezado}>
