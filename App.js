@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native';
 import { Capsalera } from './src/components/Capsalera/Capsalera';
-import { Imatges, LlocFotos } from './src/components/LlocFotos/LlocFotos';
+import { LlocFotos } from './src/components/LlocFotos/LlocFotos';
 
 
 const localImg = require('./imatges/visualstudio_code-card.png');
