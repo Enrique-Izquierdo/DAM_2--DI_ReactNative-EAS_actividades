@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     ScrollView,
+    View,
     Image,
     Dimensions,
 } from 'react-native';
+// Agafem l'amplaria de la nostra pantalla
 const screenWidth = Dimensions.get('window').width;
+// // Agafem l'alçada de la nostra pantalla
+// const screenHeight = Dimensions.get('window').height;
+// //Calculem el tamany de cada imatge
+// const imgWidth =
+//   screenHeight > screenWidth ? screenWidth / 4 : screenHeight / 4;
+
+
+
 const images = [
   'https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces',
   'https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?w=125&h=125&fit=crop',
@@ -49,11 +59,28 @@ const images = [
 export class LlocFotos extends Component {
     render() {
         return (
-            <ScrollView style={styles.contenedor_Fotos} contentContainerStyle={{flexDirection: 'column', flexWrap:'wrap', justifyContent:'space-evenly'}}>
-                {images.map((item, pos) => {
-                    return (<Image style={{ borderWidth: 1, borderColor: 'white' }} key={pos} width={screenWidth / 4.33} height={screenWidth / 4.33} source={{ uri: item }} />);
-                })}
-            </ScrollView>
+
+            // <View style={styles.contenedor_Fotos} contentContainerStyle={{flexDirection: 'column', flexWrap:'wrap', justifyContent:'space-evenly'}}>
+
+            <View style={{flex:3}}>
+                <ScrollView contentContainerStyle={{flexDirection: 'row', flexWrap:'wrap', justifyContent:'space-evenly',showsVerticalScrollIndicator: true,}}>
+                    {images.map((item, pos) => {
+                        return (<Image style={{ borderWidth: 1, borderColor: 'white' }} key={pos} width={screenWidth / 4.33} height={screenWidth / 4.33} source={{ uri: item }} />);
+                    })}
+                </ScrollView>
+            </View>
+
+            //</View>
+
+        //     <View style={{flex: 3}}>
+        //     <ScrollView contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly',showsVerticalScrollIndicator: true, }}>
+        //       {images.map((item, index) => (
+        //         <View key={index + item + ''}>
+        //           <Image source={{uri: item}} style={styles.imgGallery} />
+        //         </View>
+        //       ))}
+        //     </ScrollView>
+        //   </View>
         );
     }
 }
@@ -63,8 +90,12 @@ const styles = StyleSheet.create({
       flex: 3,
       flexDirection: 'row',
       flexWrap:'wrap',
-      // borderColor: 'blue',
-      // borderWidth: 3,
       margin: 4,
     },
+
+    // imgGallery: {
+    //     width: imgWidth,
+    //     height: imgWidth,
+    //     borderColor: '#000',
+    // },
 });
